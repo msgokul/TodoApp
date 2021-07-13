@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="card-body">
+
+                    <h5 class="card-title">{{task.task}}</h5>
+                    <h6 class="card-subtitle mb-3 ">{{task.priority}}</h6>
+                    <h6 class="card-subtitle mb-3 ">{{task.date}}</h6>
+    <!--    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                    <a href="{% url 'delete' task.id %}" class="btn btn-success" style="justify:left;">Delete</a>
+                     <a href="{% url 'update' task.id %}" class="btn btn-warning">Update</a>
+                </div>
+
+{% endblock %}
